@@ -2,7 +2,7 @@ import { ssr, ModifyHtmlFunction } from '../utils/render';
 
 export default async function page(c: Context) {
     console.log('FUNCTION PAGE TO RENDER');
-    console.log('PROBANDO GITHUB ACTIONS');
+    console.log('PROBANDO GITHUB ACTIONS test');
     // C es el contexto de Hono
     console.log('------------------------------------------------------------------');
     const slug1 = c.req.param('slug1');
