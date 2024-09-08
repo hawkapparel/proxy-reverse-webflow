@@ -34,14 +34,16 @@ app.get('/.well-know/apple-app-site-association.json', (c) => {
   return c.json(appleSiteAssociation)
 })
 
+app.get('/redirect', (c) => {
+  return c.redirect('/')
+})
+
 // Route for paths
 app.get('/:slug1?/:slug2?/:slug3?/:slug4?', async (c) => {
   return await homepage(c)
 })
 
-app.get('/redirect', (c) => {
-  return c.redirect('/')
-})
+
 
 
 
