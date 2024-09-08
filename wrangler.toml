@@ -1,0 +1,23 @@
+name = "proxy-reverse-webflow"
+pages_build_output_dir = "./dist"
+compatibility_date = "2024-09-06"
+# compatibility_flags = [ "nodejs_compat" ]
+
+[vars]
+WEBFLOW_DOMAIN = "https://hapi-519526.webflow.io/"
+
+[[kv_namespaces]]
+binding = "proxy_reverse_webflow"
+id = "95a9b12a29014018b9de7dd1f53626e3"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "my-database"
+# database_id = ""
+
+# [ai]
+# binding = "AI"

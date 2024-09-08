@@ -1,1 +1,8 @@
-# proxy-reverse-webflow
+```
+npm install
+npm run dev
+```
+
+```
+npm run deploy
+```

@@ -1,0 +1,40 @@
+name: Deploy to Cloudflare Workers
+
+# Se ejecuta cuando se hace push a la rama main
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Paso 1: Checkout del repositorio
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Paso 2: Instalar Node.js (versión 18 LTS)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # Paso 3: Instalar dependencias
+      - name: Install dependencies
+        run: npm install
+
+      # Paso 4: Build del proyecto
+      - name: Build project
+        run: npm run build
+
+      # Paso 5: Instalar Wrangler CLI globalmente
+      - name: Install Wrangler CLI
+        run: npm install -g wrangler
+
+      # Paso 6: Desplegar a Cloudflare Workers
+      - name: Deploy to Cloudflare Workers
+        env:
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: wrangler deploy --minify src/index.tsx
