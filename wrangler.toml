@@ -1,6 +1,6 @@
 name = "proxy-reverse-webflow"
 account_id = "26f8f06f881011391874205bba0e609c"
-pages_build_output_dir = "./dist"
+# pages_build_output_dir = "./dist"
 compatibility_date = "2024-09-06"
 # compatibility_flags = [ "nodejs_compat" ]
 
